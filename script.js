@@ -1,11 +1,3 @@
-/*
- * Fixed / cleaned script.js
- * - Removed obfuscation wrapper.
- * - Added null checks so the script does not crash when an element is missing.
- * - Added rel="noopener noreferrer" to external links.
- * - Neutralized unsafe spam/token/bomber tool links.
- * - Made audio autoplay graceful when the browser blocks it.
- */
 (() => {
   "use strict";
 
@@ -129,7 +121,6 @@
           alreadyPlayed = true;
         })
         .catch(() => {
-          // Browser blocked autoplay. A later user gesture can retry.
         });
     };
 
